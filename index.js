@@ -4,8 +4,8 @@ const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
 const cv = require('opencv4nodejs');
-const wcam = new cv.VideoCapture(0);
-
+const wcam = new cv.VideoCapture(0)
+port = 8080
 const farme_rate = 20;
 
 app.get('/' , (req,res) => {
@@ -20,7 +20,7 @@ setInterval(()=>{
 }, 1000 / farme_rate);
 
 console.log('listening on port 8080')
-server.listen(8080);
+server.listen(port);
 
 
 
